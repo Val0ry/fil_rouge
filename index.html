@@ -52,15 +52,12 @@
         </nav>
     </header>
 
-    <!-- Utilisation de la grille Bootstrap : container, row, col -->
     <main class="container mt-4">
         <div class="row g-4">
-            <!-- Sur les grands écrans (lg), cette colonne prend 8/12 de la largeur. Sur les plus petits, elle prend 100% -->
             <div class="col-lg-8">
                 <div class="components-list bg-white p-3 rounded shadow-sm">
                 <h1>Configuration de votre PC</h1>
 
-                <!-- Exemple pour un composant : le processeur -->
                 <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="cpu-title">
                 <h2 id="cpu-title" class="text-primary mt-0 mb-3">Processeur</h2>
                 <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
@@ -77,8 +74,6 @@
                 </div>
                 </section>
 
-                <!-- ... Répéter pour chaque catégorie de composant (RAM, GPU, etc.) -->
-                <!-- Pour l'exemple, ajoutons quelques autres sections de composants -->
                 <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="gpu-title">
                 <h2 id="gpu-title" class="text-primary mt-0 mb-3">Carte Graphique</h2>
                 <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
@@ -141,13 +136,13 @@
         <p>&copy; 2025 BuildMaster. Tous droits réservés.</p>
     </footer>
 
-    <!-- E2 : Modale d'inscription -->
+    <!-- Le modal -->
     <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-4">
                 <div class="modal-form-container">
                     <div class="modal-form-wrapper">
-                        <!-- Vue Inscription (par défaut) -->
+                        <!-- Form Inscription -->
                         <div id="signup-view" class="form-view">
                             <h2 class="text-primary text-center mt-0 mb-4">Inscription</h2>
                             <form id="signup-form">
@@ -166,7 +161,7 @@
                             <p class="text-center mt-3 mb-0">Déjà un compte ? <a href="#" id="show-login-link" class="fw-bold text-decoration-none">Connectez-vous</a></p>
                         </div>
 
-                        <!-- Vue Connexion -->
+                        <!-- Form Connexion -->
                         <div id="login-view" class="form-view">
                             <h2 class="text-primary text-center mt-0 mb-4">Connexion</h2>
                             <form id="login-form">
@@ -188,7 +183,6 @@
         </div>
     </div>
 
-    <!-- Ajout du JS de Bootstrap (Bundle inclut Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
