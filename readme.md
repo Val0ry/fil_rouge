@@ -94,7 +94,7 @@ Le projet étant constitué de fichiers statiques, aucune installation n'est req
 
 ### Livrable 1 : Captures d'écran (Responsive Design)
 
-Les captures d'écran ci-dessous montrent l'aspect du site sur différentes tailles d'appareils.
+Les captures d'écran ci-dessous montrent l'aspect du site sur différentes tailles d'appareils. J'ai supposé que les images sont dans un dossier `screenshots/` et les rapports dans `reports/`.
 
 **Vue Desktop**
 !Vue Desktop
