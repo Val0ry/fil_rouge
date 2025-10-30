@@ -109,7 +109,7 @@ Les captures d'écran ci-dessous montrent l'aspect du site sur différentes tail
 
 Un rapport d'accessibilité a été généré à l'aide de l'outil Lighthouse. Il analyse les contrastes, les attributs ARIA, la navigation au clavier et d'autres critères essentiels.
 
-➡️ **Consulter le rapport d'accessibilité détaillé (HTML)**
+[➡️ **Consulter le rapport d'accessibilité détaillé (HTML)**](https://github.com/Val0ry/fil_rouge/blob/main/reports/report-accessibility.html)
 
 ### Livrable 3 : Rapport de structuration HTML
 
