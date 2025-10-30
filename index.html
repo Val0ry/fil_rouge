@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMaster - Votre PC sur mesure</title>
+    <meta name="description" content="Configurez votre ordinateur de A à Z avec notre outil simple et puissant.">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/buildmaster.webp" alt="BuildMaster Logo" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Composants
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#cpu-title">Processeur</a></li>
+                                <li><a class="dropdown-item" href="#motherboard-title">Carte Mère</a></li>
+                                <li><a class="dropdown-item" href="#gpu-title">Carte Graphique</a></li>
+                                <li><a class="dropdown-item" href="#ram-title">Mémoire RAM</a></li>
+                                <li><a class="dropdown-item" href="#storage-title">Stockage</a></li>
+                                <li><a class="dropdown-item" href="#psu-title">Alimentation</a></li>
+                                <li><a class="dropdown-item" href="#case-title">Boîtier</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="valeurs.html">À propos de nous</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signup-modal">S'inscrire / Se connecter</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Utilisation de la grille Bootstrap : container, row, col -->
+    <main class="container mt-4">
+        <div class="row g-4">
+            <!-- Sur les grands écrans (lg), cette colonne prend 8/12 de la largeur. Sur les plus petits, elle prend 100% -->
+            <div class="col-lg-8">
+                <div class="components-list bg-white p-3 rounded shadow-sm">
+                <h1>Configuration de votre PC</h1>
+
+                <!-- Exemple pour un composant : le processeur -->
+                <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="cpu-title">
+                <h2 id="cpu-title" class="text-primary mt-0 mb-3">Processeur</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucun processeur sélectionné</p>
+                    <button class="choose-btn btn btn-primary" data-component="cpu">Choisir</button>
+                </div>
+                </section>
+
+                <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="motherboard-title">
+                <h2 id="motherboard-title" class="text-primary mt-0 mb-3">Carte Mère</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucune carte mère sélectionnée</p>
+                    <button class="choose-btn btn btn-primary" data-component="motherboard">Choisir</button>
+                </div>
+                </section>
+
+                <!-- ... Répéter pour chaque catégorie de composant (RAM, GPU, etc.) -->
+                <!-- Pour l'exemple, ajoutons quelques autres sections de composants -->
+                <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="gpu-title">
+                <h2 id="gpu-title" class="text-primary mt-0 mb-3">Carte Graphique</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucune carte graphique sélectionnée</p>
+                    <button class="choose-btn btn btn-primary" data-component="gpu">Choisir</button>
+                </div>
+                </section>
+
+                <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="ram-title">
+                <h2 id="ram-title" class="text-primary mt-0 mb-3">Mémoire RAM</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucune mémoire RAM sélectionnée</p>
+                    <button class="choose-btn btn btn-primary" data-component="ram">Choisir</button>
+                </div>
+                </section>
+
+                <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="storage-title">
+                <h2 id="storage-title" class="text-primary mt-0 mb-3">Stockage</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucun stockage sélectionné</p>
+                    <button class="choose-btn btn btn-primary" data-component="storage">Choisir</button>
+                </div>
+                </section>
+
+                <section class="component-category pb-3 mb-4 border-bottom" aria-labelledby="psu-title">
+                <h2 id="psu-title" class="text-primary mt-0 mb-3">Alimentation</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucune alimentation sélectionnée</p>
+                    <button class="choose-btn btn btn-primary" data-component="psu">Choisir</button>
+                </div>
+                </section>
+
+                <section class="component-category border-bottom-0 pb-3 mb-4" aria-labelledby="case-title">
+                <h2 id="case-title" class="text-primary mt-0 mb-3">Boîtier</h2>
+                <div class="component-choice d-flex justify-content-between align-items-center p-3 rounded border" style="background-color: var(--light-color);">
+                    <p class="m-0 fw-medium">Aucun boîtier sélectionné</p>
+                    <button class="choose-btn btn btn-primary" data-component="case">Choisir</button>
+                </div>
+                </section>
+                </div>
+            </div>
+
+            <!-- Sur les grands écrans (lg), cette colonne prend 4/12. Sur les plus petits, elle passe en dessous et prend 100% -->
+            <div class="col-lg-4">
+                <aside class="summary bg-white p-3 rounded shadow-sm sticky-top">
+                    <h2 class="mt-0 text-dark">Récapitulatif</h2>
+                    <div id="summary-content">
+                        <p>Votre configuration est vide.</p>
+                    </div>
+                    <div class="summary-price fs-4 fw-bold text-end mt-3 text-primary">
+                        Total : <span id="total-price">0.00 €</span>
+                    </div>
+                    <button id="save-config-btn" class="btn btn-primary w-100 mt-3" disabled>Sauvegarder</button>
+                </aside>
+                </div>
+        </div>
+    </main>
+
+    <footer class="main-footer bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2025 BuildMaster. Tous droits réservés.</p>
+    </footer>
+
+    <!-- E2 : Modale d'inscription -->
+    <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-form-container">
+                    <div class="modal-form-wrapper">
+                        <!-- Vue Inscription (par défaut) -->
+                        <div id="signup-view" class="form-view">
+                            <h2 class="text-primary text-center mt-0 mb-4">Inscription</h2>
+                            <form id="signup-form">
+                                <div class="mb-3">
+                                    <label for="email-signup" class="form-label fw-bold">Email :</label>
+                                    <input type="email" id="email-signup" name="email" required class="form-control">
+                                    <span class="error-message d-block mt-1"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password-signup" class="form-label fw-bold">Mot de passe :</label>
+                                    <input type="password" id="password-signup" name="password" required minlength="8" class="form-control">
+                                    <span class="error-message d-block mt-1"></span>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mt-3">Créer un compte</button>
+                            </form>
+                            <p class="text-center mt-3 mb-0">Déjà un compte ? <a href="#" id="show-login-link" class="fw-bold text-decoration-none">Connectez-vous</a></p>
+                        </div>
+
+                        <!-- Vue Connexion -->
+                        <div id="login-view" class="form-view">
+                            <h2 class="text-primary text-center mt-0 mb-4">Connexion</h2>
+                            <form id="login-form">
+                                <div class="mb-3">
+                                    <label for="email-login" class="form-label fw-bold">Email :</label>
+                                    <input type="email" id="email-login" name="email" required class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password-login" class="form-label fw-bold">Mot de passe :</label>
+                                    <input type="password" id="password-login" name="password" required class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mt-3">Se connecter</button>
+                            </form>
+                            <p class="text-center mt-3 mb-0">Pas encore de compte ? <a href="#" id="show-signup-link" class="fw-bold text-decoration-none">Inscrivez-vous</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ajout du JS de Bootstrap (Bundle inclut Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* css/style.css */
+
+/* Variables pour une maintenance facile */
+:root {
+    --primary-color: #007bff; /* Bleu vif */
+    --secondary-color: #6c757d; /* Gris */
+    --success-color: #28a745; /* Vert */
+    --danger-color: #dc3545; /* Rouge */
+    --dark-color: #222; /* Texte sombre */
+    --light-color: #f8f9fa; /* Fond clair */
+    --white-color: #fff; /* Blanc */
+    --border-color: #dee2e6; /* Bordure */
+    --border-radius: 0.25rem; /* Rayon de bordure */
+    --spacing-unit: 1rem; /* Unité d'espacement de base */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Ajoute un espace en haut pour que le contenu ne soit pas caché par la navbar fixe */
+body {
+    padding-top: 70px; /* Ajustez cette valeur si la hauteur de votre navbar change */
+}
+
+/* Rétablit la couleur noire pour les liens de la navbar */
+/* On utilise un sélecteur plus spécifique pour outrepasser Bootstrap */
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark-color); /* Applique la couleur noire définie dans :root */
+}
+
+
+.value-item .value-icon {
+    height: 60px; /* Taille des icônes */
+    width: 60px;
+    margin-bottom: var(--spacing-unit);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Rend les photos rondes */
+    object-fit: cover; /* Assure que l'image remplit le cercle sans être déformée */
+    margin-bottom: var(--spacing-unit);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+}
+
+
+/* Conteneur qui cache le débordement */
+.modal-form-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Conteneur interne qui va bouger */
+.modal-form-wrapper {
+    display: flex;
+    width: 200%; /* Deux fois la largeur pour les deux panneaux */
+    transition: transform 0.2s ease-in-out; /* Animation de glissement plus rapide */
+}
+
+/* Chaque panneau (vue) prend la moitié de la largeur du wrapper */
+.form-view {
+    width: 50%;
+    padding: 0 0.5rem; /* Un peu d'espace pour ne pas coller aux bords */
+    box-sizing: border-box;
+}
+
+/* Classe pour activer la vue de connexion */
+.modal-form-wrapper.show-login {
+    transform: translateX(-50%); /* Déplace le wrapper de 50% vers la gauche */
+}
+
+/* Style pour le récapitulatif collant */
+.summary.sticky-top {
+    top: 86px; /* Hauteur de la navbar (70px) + un peu d'espace (16px) */
+    z-index: 1019; /* Juste en dessous du z-index de la navbar (1020) pour éviter les conflits */
+}
