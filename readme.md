@@ -94,16 +94,16 @@ Le projet étant constitué de fichiers statiques, aucune installation n'est req
 
 ### Livrable 1 : Captures d'écran (Responsive Design)
 
-Les captures d'écran ci-dessous montrent l'aspect du site sur différentes tailles d'appareils. J'ai supposé que les images sont dans un dossier `screenshots/` et les rapports dans `reports/`.
+Les captures d'écran ci-dessous montrent l'aspect du site sur différentes tailles d'appareils.
 
 **Vue Desktop**
-!Vue Desktop
+![](screenshots/desktop.png)
 
 **Vue Tablette**
-!Vue Tablette
+![](screenshots/tablet.png)
 
 **Vue Mobile**
-!Vue Mobile
+![](screenshots/mobile.png)
 
 ### Livrable 2 : Rapport d'analyse accessibilité
 
